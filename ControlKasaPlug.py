@@ -13,27 +13,27 @@ def publish_status(client, status):
 async def plug_control(plug, mqtt_client):
     while True:
         now = datetime.now().time() # get the current time
-        turn_on_time =  time(19, 0) # 7pm
+        turn_on_time =  time(19, 0) # 7:00 pm
         breaking_time = time(23, 59)
         mid_night_time = time (0, 0)
-        turn_off_time = time(7, 30) # 7am
+        turn_off_time = time(7, 30) # 7:30 am
 
         if now >= turn_on_time and now <= breaking_time :
-            await plug.turn_on()
-            print( plug.alias + " is on")
-            publish_status(mqtt_client, "on")
+            await plug.turn_on()  # turn on the light
+            #print( plug.alias + " is on")
+            publish_status(mqtt_client, "on") # send mqtt message to node-red
 
 
         elif now >= mid_night_time and now < turn_off_time:
-            await plug.turn_on()
-            print( plug.alias + " is on")
-            publish_status(mqtt_client, "on")
+            await plug.turn_on() # turn on the light
+            #print( plug.alias + " is on")
+            publish_status(mqtt_client, "on") # send mqtt message to node-red
 
 
         elif now >= turn_off_time and now < turn_on_time:
-            await plug.turn_off()
-            print(plug.alias + " is off")
-            publish_status(mqtt_client, "off")
+            await plug.turn_off() # turn off the light
+            #print(plug.alias + " is off")
+            publish_status(mqtt_client, "off") # send mqtt message to node-red
 
         await asyncio.sleep(600) # check evey 10 mins
 
