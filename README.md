@@ -18,3 +18,7 @@
 4. Raspberry Pi 4
 5. Kasa Smart Plug
 6. Decoration light
+
+
+## Files:
+- ***requirements.txt***: Lists the required libraries and packages.
