@@ -21,5 +21,4 @@
 
 
 ## Files:
-- ***requirements.txt***: Lists the required libraries and packages.
 - ***Node-Red JSON Flow.json***: flow nodes for visualizing/dashboard the light status.
