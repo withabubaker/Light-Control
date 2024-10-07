@@ -6,5 +6,15 @@
 ## Project Goals:
 
 - Schedule decoration light turn on/off time using Python code.
-- convert Python script to a service that's running in the background on Raspberry pi.
+- Convert Python script to a service that's running in the background on Raspberry pi.
 - Visualize the light status using Node-Red, green if the light is on, and red if the light is off.
+
+
+## Libraries & Tools & Hardware:
+
+1. Python 3.7.3
+2. SmartPlug
+3. MQTT
+4. Raspberry Pi 4
+5. Kasa Smart Plug
+6. Decoration light
