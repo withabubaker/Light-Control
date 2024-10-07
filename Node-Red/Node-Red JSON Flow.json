@@ -1,0 +1,91 @@
+[
+    {
+        "id": "286fd5728e45b7b1",
+        "type": "mqtt in",
+        "z": "461a6d760a8703e7",
+        "name": "",
+        "topic": "balcony/plug/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "b8298732fff8169e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "3103364ea6fc88c6"
+            ]
+        ]
+    },
+    {
+        "id": "3103364ea6fc88c6",
+        "type": "ui_template",
+        "z": "461a6d760a8703e7",
+        "group": "d4040b2075e0530d",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    .led-container {\n        display: flex;\n        align-items: center;\n        justify-content: space-between; \n        padding: 10px;\n    }\n    .led {\n        height: 30px;\n        width: 30px;\n        border-radius: 50%;\n        display: inline-block;\n        margin-right: 10px;\n    }\n\n    .on {\n        background-color: green;\n    }\n\n    .off {\n        background-color: red;\n    }\n</style>\n<div class=\"led-container\">\n    <span>Balcony light status: {{msg.payload}}</span>\n    <span class=\"led {{msg.payload === 'on' ? 'on' : 'off'}}\"></span>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 420,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8298732fff8169e",
+        "type": "mqtt-broker",
+        "name": "local-mqtt-broker",
+        "broker": "192.168.2.13",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": "",
+        "credentials": {}
+    },
+    {
+        "id": "d4040b2075e0530d",
+        "type": "ui_group",
+        "name": "Light Control",
+        "tab": "fd1ec04ec88aefeb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd1ec04ec88aefeb",
+        "type": "ui_tab",
+        "name": "Smart Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
