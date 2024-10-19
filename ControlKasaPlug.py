@@ -15,10 +15,10 @@ async def plug_control(plug):
         client = mqtt.Client()
         client.connect(mqtt_broker)
         now = datetime.now().time() # get the current time
-        turn_on_time =  time(19, 0) # 7:00 pm
+        turn_on_time =  time(18, 0) # 6:00 pm
         breaking_time = time(23, 59)
         mid_night_time = time (0, 0)
-        turn_off_time = time(7, 30) # 7:30 am
+        turn_off_time = time(6, 30) # 6:30 am
 
         if now >= turn_on_time and now <= breaking_time :
             await plug.turn_on()  # turn on the light
