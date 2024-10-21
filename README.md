@@ -25,7 +25,25 @@
 sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
 ```
 
+2. add the following to the file
 
+```bash
+[Unit]
+Description=Kasa Smart Plug Control Service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/bin/python /home/pi/ControlKasaPlug.py
+WorkingDirectory=/home/pi/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+
+[Install]
+WantedBy=multi-user.target
+```
 
 ## Files:
 - ***Node-Red JSON Flow.json***: flow nodes for visualizing/dashboard the light status.
