@@ -20,12 +20,13 @@
 
 ## Setup Linux Service to Run Python app in the Background
 
-1. Create a new service file
+**Create a new service file**
+
 ```bash
 sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
 ```
 
-2. Add the following to the file (update the name and location as required)
+**Add the following to the file (update the name and location as required)**
 
 ```bash
 [Unit]
@@ -45,17 +46,20 @@ User=pi
 WantedBy=multi-user.target
 ```
 
-3. Reload Daemon
+**Reload Daemon**
+
 ```bash
 sudo systemctl daemon-reload
 ```
 
-4. Enable the service (this will allow the service to run automatically after reboot)
+**Enable the service (this will allow the service to run automatically after reboot)**
+
 ```bash
 sudo systemctl enable ControlKasaSmartPlug.service
 ```
 
-5. Now go ahead and start the service
+**Now go ahead and start the service**
+
 ```bash
 sudo systemctl start ControlKasaSmartPlug.service
 ```
