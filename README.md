@@ -13,10 +13,9 @@
 ## Libraries & Tools & Hardware:
 
 1. Python 3.7.3
-2. SmartPlug
+2. [Kasa Smart Plug](https://www.kasasmart.com/us/products/smart-plugs)
 3. MQTT
 4. Raspberry Pi 4
-5. [Kasa Smart Plug](https://www.kasasmart.com/us/products/smart-plugs)
 6. Decoration light
 
 
