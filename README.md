@@ -25,7 +25,7 @@
 sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
 ```
 
-2. add the following to the file
+2. add the following to the file (update the name and location as required)
 
 ```bash
 [Unit]
