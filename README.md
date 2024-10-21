@@ -20,7 +20,8 @@
 
 ## Flow Chart
 ![alt_text](https://github.com/withabubaker/Lighting-Control/blob/master/img/Lighting-Control-FlowChart.jpg)
-## Setup Linux Service to Run Python app in the Background
+
+## Setup Linux Service to Run Python app as a Service in the Background
 
 **Create a new service file**
 
