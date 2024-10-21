@@ -25,7 +25,7 @@
 sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
 ```
 
-2. add the following to the file (update the name and location as required)
+2. Add the following to the file (update the name and location as required)
 
 ```bash
 [Unit]
@@ -44,6 +44,22 @@ User=pi
 [Install]
 WantedBy=multi-user.target
 ```
+
+3. Reload Daemon
+```bash
+sudo systemctl daemon-reload
+```
+
+4. Enable the service (this will allow the service to run automatically after reboot)
+```bash
+sudo systemctl enable ControlKasaSmartPlug.service
+```
+
+5. Now go ahead and start the service
+```bash
+sudo systemctl start ControlKasaSmartPlug.service
+```
+
 
 ## Files:
 - ***Node-Red JSON Flow.json***: flow nodes for visualizing/dashboard the light status.
