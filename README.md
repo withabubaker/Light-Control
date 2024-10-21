@@ -23,6 +23,7 @@
 1. Create a new service file
 ```bash
 sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
+```
 
 
 
