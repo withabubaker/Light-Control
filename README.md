@@ -18,6 +18,13 @@
 4. Raspberry Pi 4
 6. Decoration light
 
+## Setup Linux Service to Run Python app in the Background
+
+1. Create a new service file
+```bash
+sudo nano /etc/systemd/system/ControlKasaSmartPlug.service
+
+
 
 ## Files:
 - ***Node-Red JSON Flow.json***: flow nodes for visualizing/dashboard the light status.
